@@ -1,0 +1,191 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #435769, #15686c);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.weather-app {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.2s ease;
+}
+
+.search-box {
+  margin: 15px 0;
+}
+
+input {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  width: 60%;
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  margin: 5px;
+  cursor: pointer;
+  background: #fff;
+  color: #333;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #f1f1f1;
+}
+
+.weather-info {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.forecast-section {
+  margin-top: 30px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+}
+
+.forecast-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.forecast-card {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: 12px;
+  width: 130px;
+  text-align: center;
+  font-size: 14px;
+  transition: transform 0.3s ease, background 0.3s;
+  animation: popIn 0.8s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.forecast-card img {
+  width: 45px;
+  height: 45px;
+}
+
+canvas {
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.loader {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+.slide-down {
+  animation: slideDown 1s ease;
+}
+
+.bounce-in {
+  animation: popIn 0.8s ease;
+}
+
+.card {
+  animation: fadeIn 1.2s ease;
+}
+
+@media (max-width: 768px) {
+  .forecast-cards {
+    justify-content: center;
+  }
+
+  .forecast-card {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    padding: 10px 14px;
+  }
+}

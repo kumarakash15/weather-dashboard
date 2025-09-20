@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="weather-app fade-in">
+    <h1 class="slide-down">🌤 Weather Dashboard</h1>
+
+    <div class="search-box bounce-in">
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button onclick="getWeatherByCity()">Search</button>
+      <button onclick="getWeatherByLocation()">📍 My Location</button>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- Current Weather -->
+    <div class="weather-info card" id="weatherInfo"></div>
+
+    <!-- Forecast Section -->
+    <div class="forecast-section fade-in">
+      <h2>5-Day Forecast</h2>
+      <div class="forecast-cards" id="forecastCards"></div>
+      <canvas id="forecastChart"></canvas>
+    </div>
+  </div>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
