@@ -1,5 +1,5 @@
 const apiKey = "667f26b635981686419aa16a49f1de47";
-let forecastChart; // For Chart.js
+let forecastChart;
 
 function showLoader() {
   document.getElementById("loader").classList.remove("hidden");
